@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fotografías">
+    <meta name="keywords" content="fotografías, KJMena">
+    <title>Fotografías - KJMena</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url(./imagenes/3.2.gif) no-repeat center center fixed;
+            background-size: cover;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+        .navbar-nav .nav-item .nav-link {
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #930f0f;
+        }
+        .contenido {
+            margin: 50px 10px;
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        .img-fluid {
+            transition: transform 0.3s ease-in-out;
+            width: 75%; /* Ajustar tamaño de la imagen */
+            max-width: 300px; /* Tamaño máximo de la imagen */
+            height: auto; /* Mantener la proporción */
+        }
+        .img-fluid:hover {
+            transform: scale(1.1);
+        }
+        .material-symbols-outlined, .fa-home {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 36px;
+            background-color: #ffffff;
+            color: rgb(255, 0, 0);
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .material-symbols-outlined:hover, .fa-home:hover {
+            background-color: #ff0000;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+
+        h1, h2, h3 {
+            font-size: 2rem; /* Tamaño de los encabezados */
+        }
+        p {
+            font-size: 1.2rem; /* Tamaño del texto del párrafo */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .img-fluid {
+                width: 100%;
+                max-width: 100%; /* Ancho completo en dispositivos pequeños */
+            }
+            .contenido {
+                text-align: center;
+            }
+        }
+        @media (max-width: 576px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            .contenido {
+                flex-direction: column;
+            }
+        }
+        .parallax {
+            background-image: url('./imagenes/descarga1.gif'); /* Cambia esto a tu imagen */
+            height: 300px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0.8;
+        }
+        .parallax .lead {
+            font-size: 3rem;
+            color: black;
+            justify-content: center;
+        }
+        .transition-example {
+            transition: transform 0.5s ease;
+        }
+        .transition-example:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hover-fade:hover {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        .hover-slide:hover {
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .zoom-in {
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .hover-zoom:hover {
+            animation: zoomIn 0.75s ease-in-out;
+        }
+        .fade-in h1, .fade-in h2, .fade-in p, .fade-in a {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hover-fade h1:hover, .hover-fade h2:hover, .hover-fade p:hover, .hover-fade a:hover {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .destacadas{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+.destacadas1{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">KJMena</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fas fa-info-circle"></i> Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fotos.html"><i class="fas fa-camera"></i> Fotografías</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html"><i class="fas fa-envelope"></i> Contactame</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container my-5 slide-in hover-slide content">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="./imagenes/descarga11.gif" class="img-fluid transition-example" alt="Nosotros">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center text-white">
+                <h2 class="fade-in hover-fade">Fotografías</h2>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mt-4">
+        <section id="fotos" class="contenido">
+            <h2 class=" contenido fade-in hover-fade">Conoce algunas de las fotografías que he tomado, espero les agraden</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/1.arbol.webp" alt="Arbol" class="img-fluid rounded destacadas1">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/2.flores.webp" alt="Flores" class="img-fluid rounded destacadas1">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/3.arboles.webp" alt="Arboles" class="img-fluid rounded destacadas1">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/5.flor.webp" alt="Flor" class="img-fluid rounded destacadas">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/6..jpeg" alt="Flor" class="img-fluid rounded destacadas">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/7.jpeg" alt="Flor" class="img-fluid rounded destacadas">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/8.jpeg" alt="Flor" class="img-fluid rounded destacadas1">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/9.jpeg" alt="Flor" class="img-fluid rounded destacadas1">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 zoom-in hover-zoom">
+                    <img src="imagenes/10.jpeg" alt="Flor" class="img-fluid rounded destacadas1">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div>
+                        <a href="https://www.facebook.com/julimenav" class="fab fa-facebook mx-2 text-white"> Facebook</a>
+                        <a href="https://www.instagram.com/kjmena/" class="fab fa-instagram mx-2 text-white"> Instagram</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="fotos.html" class="text-white">Fotografías</a></li>
+                        <li><a href="contacto.html" class="text-white">Contactame</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    &copy; 2024 KJMena. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a id="arriba" href="#" class="fa fa-home"></a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
